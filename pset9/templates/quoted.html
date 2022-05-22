@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+A share of {{ stockinfo['name'] }}, ({{ stockinfo['symbol'] }}) costs {{ usd((stockinfo['price'])) }}
+
+{% endblock %}

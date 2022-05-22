@@ -1,0 +1,55 @@
+{
+    "ace": {
+        "@behavioursEnabled": true,
+        "@fontSize": 12,
+        "@keyboardmode": "default",
+        "@showFoldWidgets": false,
+        "@showGutter": true,
+        "@showInvisibles": false,
+        "@showPrintMargin": false,
+        "statusbar": {
+            "@show": true
+        }
+    },
+    "breakpoints": {
+        "@active": true
+    },
+    "collab": {
+        "@timeslider-visible": false
+    },
+    "debug": {
+        "@pause": 2
+    },
+    "imgeditor": {
+        "@smooth": false,
+        "@zoom": 40
+    },
+    "language": {
+        "@continuousCompletion": false,
+        "@enterCompletion": false
+    },
+    "openfiles": {
+        "@show": false
+    },
+    "projecttree": {
+        "@showhidden": false
+    },
+    "tabs": {
+        "@asterisk": false,
+        "@show": true,
+        "editorTypes": {
+            "@class": "none",
+            "@exe": "none",
+            "@gz": "none",
+            "@o": "none",
+            "@pyc": "none",
+            "@raw": "none",
+            "@tar": "none",
+            "@zip": "none"
+        }
+    },
+    "terminal": {
+        "@fontsize": 12,
+        "@scrollback": 2000
+    }
+}

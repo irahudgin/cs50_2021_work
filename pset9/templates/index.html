@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<div class="section">
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stockinfo %}
+                <tr>
+                    <td>{{ stock['symbol'] }}</td>
+                    <td>{{ stock['name'] }}</td>
+                    <td>{{ stock['shares'] }}</td>
+                    <td>{{ usd(stock['price']) }}</td>
+                    <td>{{ usd(stock['price']*stock['shares']) }}</td>
+                </tr>
+            {% endfor %}
+                <tr>
+                    <td>Cash</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ usd(cashinfo[0]['cash']) }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><b>{{ usd(totals + cashinfo[0]['cash']) }}</b></td>
+                </tr>
+        </tbody>
+    </table>
+    <form action="/" method="post">
+
+        <div class="form-group">
+            <input name="cash" type="text" class="shares" placeholder="Amount" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" type="submit">ADD CASH</button>
+
+    </form>
+</div>
+
+{% endblock %}

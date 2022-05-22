@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+            
+            function mc()
+            {
+                 let black = document.querySelector('#black');
+                 let blue = document.querySelector('#blue');
+                 let green = document.querySelector('#green');
+                 let red = document.querySelector('#red')
+                 let answer = document.querySelector('#answer');
+                 
+                black.onclick = function() {
+                    black.style.backgroundColor = 'red';
+                    answer.innerHTML = 'Incorrect';
+                };
+                blue.onclick = function() {
+                    blue.style.backgroundColor = 'red';
+                    answer.innerHTML = 'Incorrect';
+                };
+                red.onclick = function() {
+                    red.style.backgroundColor = 'red';
+                    answer.innerHTML = 'Incorrect';
+                };
+                green.onclick = function() {
+                    green.style.backgroundColor = 'green';
+                    answer.innerHTML = 'Correct!';
+                };
+            
+            document.querySelector('form').addEventListener('submit', correctness)
+                
+            }
+            
+            document.addEventListener('DOMContentLoaded', mc);
+            
+            
+            function correctness()
+            {
+                let answer2 = document.querySelector('#answer2');
+                let txtans = document.querySelector('#name').value;
+                let txtbox = document.querySelector('#name');
+                
+                if (txtans != "chlorophyll")
+                {
+                    txtbox.style.backgroundColor = 'red';
+                    answer2.innerHTML = 'Incorrect';
+                }
+                else
+                {
+                    txtbox.style.backgroundColor = 'green';
+                    answer2.innerHTML = 'Correct!';
+                }
+                
+            
+            
+            }
+                
+        </script>
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What colour is a cactus </h3>
+                <p id="answer"></p>
+                <button id="black">black</button>
+                <button id="green">green</button>
+                <button id="blue">blue</button>
+                <button id="red">red</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What compound is responsible for making a cactus green?</h3>
+                <p id="answer2"></p>
+                <form onsubmit="return false";>
+                    <input id="name" type="text">
+                    <input type="submit">
+                </form>
+                    
+                
+            </div>
+
+        </div>
+    </body>
+</html>
